@@ -8,9 +8,9 @@ export default {
       "locale.selector": {
         label: "Sélectionnez une langue",
         options: {
-          en: "Anglais",
-          fr: "Français",
-          es: "Espagnol",
+          en: "🇺🇸",
+          fr: "🇫🇷",
+          es: "🇪🇸",
         },
       },
     },
