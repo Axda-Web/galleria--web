@@ -17,6 +17,7 @@ export function GalleriaLogo({
       href={NAV_LINKS.HOME}
       className="text-foreground"
       data-testid="galleria-logo"
+      aria-label="galleria logo"
     >
       <svg
         className={className}

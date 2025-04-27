@@ -42,7 +42,10 @@ next-env.d.ts
 
 # frontend mentor
 /frontend-mentor
+
+# storybook
 *storybook.log
+storybook-static/
 
 # Playwright
 node_modules/
