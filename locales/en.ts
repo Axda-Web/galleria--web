@@ -1,18 +1,17 @@
 // locales/en.ts
 export default {
-  hello: "Hello",
-  "hello.world": "Hello world!",
-  welcome: "Hello {name}!",
-  page: {
-    home: {
-      "locale.selector": {
-        label: "Select a language",
-        options: {
-          en: "🇺🇸",
-          fr: "🇫🇷",
-          es: "🇪🇸",
-        },
-      },
+  localeSelector: {
+    label: "Select a language",
+    options: {
+      en: "EN",
+      fr: "FR",
+      es: "ES",
     },
+  },
+  header: {
+    startSlideshow: "START SLIDESHOW",
+  },
+  pages: {
+    home: {},
   },
 } as const;

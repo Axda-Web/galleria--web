@@ -1,24 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Libre_Baskerville } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { Header } from "@/components/header";
 import { I18nProviderClient } from "@/locales/client";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-libre-baskerville",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+import { ThemeProvider } from "@/providers/theme-provider";
+import { LocaleSelector } from "@/components/locale-selector";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { libreBaskerville } from "@/assets/fonts/libre-baskerville";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -34,13 +21,20 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${libreBaskerville.variable} antialiased`}>
         <I18nProviderClient locale={locale}>
-          <Header />
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <LocaleSelector />
+            <ThemeToggle />
+          </ThemeProvider>
         </I18nProviderClient>
       </body>
     </html>
