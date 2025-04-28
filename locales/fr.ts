@@ -9,7 +9,7 @@ export default {
     },
   },
   header: {
-    startSlideshow: "DÉMARRER LE SLIDESHOW",
+    startSlideshow: "démarrer le slideshow",
   },
   pages: {
     home: {},
