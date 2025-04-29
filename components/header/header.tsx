@@ -10,7 +10,7 @@ export function Header() {
   return (
     <header
       data-testid="header"
-      className="flex items-center justify-between p-6 border-b text-gray-500 font-bold text-xs"
+      className="flex items-center justify-between p-6 border-b text-start-slideshow-btn font-bold text-xs"
     >
       <GalleriaLogo />
       <Button variant="ghost" className="uppercase">

@@ -16,7 +16,8 @@ const meta = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const logo = await canvas.findByRole("link");
+
+    const logo = await canvas.findByRole("link", { name: "galleria logo" });
     expect(logo).toBeInTheDocument();
   },
 } satisfies Meta<typeof GalleriaLogo>;
