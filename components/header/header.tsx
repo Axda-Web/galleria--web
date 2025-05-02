@@ -5,7 +5,7 @@ import { useScopedI18n } from "@/locales/client";
 import { Button } from "../ui/button";
 
 export function Header() {
-  const scopedT = useScopedI18n("header");
+  const t = useScopedI18n("header");
 
   return (
     <header
@@ -14,7 +14,7 @@ export function Header() {
     >
       <GalleriaLogo />
       <Button variant="ghost" className="uppercase">
-        {scopedT("startSlideshow")}
+        {t("startSlideshow")}
       </Button>
     </header>
   );

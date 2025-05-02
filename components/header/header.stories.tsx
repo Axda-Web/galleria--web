@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
+import { withProvidersDecorator } from "../../.storybook/decorators";
 
 import { Header } from "./header";
 
@@ -21,6 +22,7 @@ const meta = {
     });
     expect(startSlideshowBtn).toBeInTheDocument();
   },
+  decorators: [withProvidersDecorator],
 } satisfies Meta<typeof Header>;
 
 export default meta;

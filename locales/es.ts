@@ -8,6 +8,13 @@ export default {
       es: "ES",
     },
   },
+  themeToggle: {
+    options: {
+      light: "Claro",
+      dark: "Oscuro",
+      system: "Sistema",
+    },
+  },
   header: {
     startSlideshow: "iniciar slideshow",
   },
