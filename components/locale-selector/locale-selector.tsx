@@ -21,7 +21,7 @@ export function LocaleSelector() {
   const t = useScopedI18n("localeSelector");
 
   return (
-    <div className="fixed bottom-4 right-4">
+    <div className="fixed bottom-4 right-4" data-testid="locale-selector">
       <Select value={locale} onValueChange={changeLocale}>
         <SelectTrigger>
           <SelectValue placeholder={t(`options.${locale}`)} />
