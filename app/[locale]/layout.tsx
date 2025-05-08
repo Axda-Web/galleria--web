@@ -5,7 +5,7 @@ import { I18nProviderClient } from "@/locales/client";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { LocaleSelector } from "@/components/locale-selector";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { libreBaskerville } from "@/assets/fonts/libre-baskerville";
+import { libreBaskerville } from "@/public/assets/fonts/libre-baskerville";
 
 export const metadata: Metadata = {
   title: "Galleria",
