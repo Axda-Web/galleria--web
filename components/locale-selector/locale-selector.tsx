@@ -23,7 +23,7 @@ export function LocaleSelector() {
   return (
     <div className="fixed bottom-4 right-4" data-testid="locale-selector">
       <Select value={locale} onValueChange={changeLocale}>
-        <SelectTrigger>
+        <SelectTrigger className="bg-white">
           <SelectValue placeholder={t(`options.${locale}`)} />
         </SelectTrigger>
         <SelectContent>

@@ -5,6 +5,11 @@ test.describe("HOME PAGE", () => {
     await page.goto("http://localhost:3000/en");
   });
 
+  test.afterEach(async ({ page }) => {
+    // Reset to English explicitly if needed
+    await page.goto("http://localhost:3000/en");
+  });
+
   test.describe("Home page metadata", async () => {
     test("should have a title", async ({ page }) => {
       await expect(page).toHaveTitle("Galleria");
@@ -118,5 +123,27 @@ test.describe("HOME PAGE", () => {
     });
 
     // TODO: Find a way to test system theme click
+  });
+
+  test.describe("Painting cards", async () => {
+    test("First painting card is visible", async ({ page }) => {
+      const paintingCards = page.getByTestId("painting-card").first();
+
+      await expect(paintingCards).toBeVisible();
+      await expect(paintingCards).toHaveAttribute(
+        "href",
+        "/paintings/starry-night"
+      );
+    });
+
+    test("Last painting card is visible", async ({ page }) => {
+      const paintingCards = page.getByTestId("painting-card").last();
+
+      await expect(paintingCards).toBeVisible();
+      await expect(paintingCards).toHaveAttribute(
+        "href",
+        "/paintings/the-swing"
+      );
+    });
   });
 });

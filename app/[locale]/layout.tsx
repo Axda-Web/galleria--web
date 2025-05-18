@@ -31,8 +31,10 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
-            {children}
+            <div className="max-w-[1360px] mx-auto">
+              <Header />
+              {children}
+            </div>
             <LocaleSelector />
             <ThemeToggle />
           </ThemeProvider>
